@@ -1,4 +1,6 @@
 
+{{ config(materialized='table') }}
+
 -- Select data from source and potentially transform it
 WITH source_data as 
 (
