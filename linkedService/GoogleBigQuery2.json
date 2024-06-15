@@ -1,0 +1,20 @@
+{
+	"name": "GoogleBigQuery2",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "GoogleBigQueryV2",
+		"typeProperties": {
+			"projectId": "ga-pbi-integration",
+			"authenticationType": "ServiceAuthentication",
+			"keyFileContent": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "bq-db-srvc-key"
+			}
+		}
+	}
+}
